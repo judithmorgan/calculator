@@ -1,0 +1,21 @@
+body {
+    background-color: #FFF5ED
+}
+
+.calculator {
+    background-color:#FAE0D8;
+    width: 50vw;
+    border-radius: 20px;
+    padding: 20px;
+   
+ }
+
+
+ .screen{ 
+    width: 50vw;
+    background-color: blue;
+ }
+
+ .button {
+    background-color: #dfe1be;
+ }
