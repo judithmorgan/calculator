@@ -1,48 +1,78 @@
+html {
+   /* footer support */
+   position: relative;
+   min-height: 100%;
+}
+
 body {
-   background-color: #FFF5ED
+   background-color: #FFF5ED;
+   display: flex;
+   flex-direction: column;
 }
 
-main { 
-display: flex;
-justify-content: center;
-height: 75vh;
-padding: 20px;
-margin-top:60px;
+main {
+   display: flex;
+   justify-content: center;
+   /*why does this do this? */
+   align-items: center;
+   padding: 50px;
+   height: 75vh;
+   padding: 10px;
+   margin-top: 50px;
 }
-
 
 .calculator {
-   width: 500px;
+   display: flex;
+   flex-direction: column;
+
+   width:350px;
    background-color: #FAE0D8;
    border-radius: 20px;
    border: #C4B7BB 2px solid;
    padding: 20px;
-   
-  
-
+   margin: 80px;
 }
+
 .screen {
-   padding: 10px 20px;
-   height: 20%;
+   height: 50px;
+   padding: 10px;
    border-radius: 5px;
    margin-bottom: 20px;
    background-color: #dfe1be;
    text-align: right;
 }
-.button {
-   background-color: #dfe1be;
-}
+
 .btn {
-
    background-color: #F1DEEE;
+   font-size: 20px;
+   padding: 20px;
+   border-radius: 5px;
 }
 
-.buttons-area { 
-display: grid ;
-grid-template-columns: repeat(4, 1fr);
-grid-gap:10px;
+.buttons-area {
+   display: grid;
+   grid-template-columns: repeat(4, 1fr);
+   grid-gap: 10px;
 }
 
+.span-2 {
+   grid-column: span 2;
+   font-size: 20px;
+   padding: 20px;
+   border-radius: 5px;
+}
+
+footer {
+   /* what does position:absolute do? */
+   position: absolute;
+   bottom: 0;
+   left: 0;
+   display: flex;
+   justify-content: center;
+   width: 100%;
+   padding: 10px;
+   font-size: 20px;
+}
 
 
 /*
