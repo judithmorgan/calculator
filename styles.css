@@ -1,21 +1,49 @@
 body {
-    background-color: #FFF5ED
+   background-color: #FFF5ED
 }
 
+main { 
+display: flex;
+justify-content: center;
+height: 75vh;
+padding: 20px;
+margin-top:60px;
+}
+
+
 .calculator {
-    background-color:#FAE0D8;
-    width: 50vw;
-    border-radius: 20px;
-    padding: 20px;
+   width: 500px;
+   background-color: #FAE0D8;
+   border-radius: 20px;
+   border: #C4B7BB 2px solid;
+   padding: 20px;
    
- }
+  
+
+}
+.screen {
+   padding: 10px 20px;
+   height: 20%;
+   border-radius: 5px;
+   margin-bottom: 20px;
+   background-color: #dfe1be;
+   text-align: right;
+}
+.button {
+   background-color: #dfe1be;
+}
+.btn {
+
+   background-color: #F1DEEE;
+}
+
+.buttons-area { 
+display: grid ;
+grid-template-columns: repeat(4, 1fr);
+grid-gap:10px;
+}
 
 
- .screen{ 
-    width: 50vw;
-    background-color: blue;
- }
 
- .button {
-    background-color: #dfe1be;
- }
+/*
+ * Button Styles #FOF4BF
