@@ -82,3 +82,17 @@ function setOperation(operator) {
     previousDisplayScreen.textContent = `${firstOperand} ${currentOperation}`
     shouldResetScreen = true
 }
+
+function evaluate() {
+    if (currentOperation === null || shouldResetScreen) return
+    if (currentOperation === '÷' && currentDisplayScreen.textContent === '0') {
+        alert("You can't divide by 0!")
+        return
+    }
+    secondOperand = currentDisplayScreen.textContent
+    currentDisplayScreen.textContent = roundResult(
+        operate(currentOperation, firstOperand, secondOperand)
+    )
+    previousDisplayScreen.textContent = `${firstOperand} ${currentOperation} ${secondOperand} =`
+    currentOperation = null
+}
