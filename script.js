@@ -33,5 +33,16 @@ numberButtons.forEach((button) =>
 )
 
 operatorButtons.forEach((button) =>
- button.addEventListener('click', () => setOperation(button.textContent))
+    button.addEventListener('click', () => setOperation(button.textContent))
 )
+
+function appendNumber(number) {
+    if (currentDisplayScreen.textContent === '0' || shouldResetScreen)
+        resetScreen()
+    currentDisplayScreen.textContent += number
+}
+
+function resetScreen() {
+    currentDisplayScreen.textContent = ''
+    shouldResetScreen = false
+}
