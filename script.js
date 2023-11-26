@@ -16,3 +16,22 @@ const deleteButton = document.getElementById('deleteBtn')
 const pointButton = document.getElementById('pointBtn')
 const currentDisplayScreen = document.getElementById('currentDisplayScreen')
 const previousDisplayScreen = document.getElementById('previousDisplayScreen')
+
+
+/* when you want to get inputs from a keyboard */
+window.addEventListener('keydown', handleKeyboardInput)
+
+
+equalsButton.addEventListener('click', evaluate)
+clearButton.addEventListener('click', clear)
+deleteButton.addEventListener('click', deleteNumber)
+pointButton.addEventListener('click', appendPoint)
+
+
+numberButtons.forEach((button) =>
+    button.addEventListener('click', () => appendNumber(button.textContent))
+)
+
+operatorButtons.forEach((button) =>
+ button.addEventListener('click', () => setOperation(button.textContent))
+)
