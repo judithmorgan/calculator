@@ -7,6 +7,9 @@
 - the. to work 
 - the numbers to enter */
 
+
+console.log("Hi there!")
+
 let firstOperand = ''
 let secondOperand = ''
 let currentOperation = null
@@ -100,14 +103,55 @@ function evaluate() {
 
 function roundResult(number) {
     return Math.round(number * 1000) / 1000
-  }
+}
 
-  function handleKeyboardInput(e) {
+function handleKeyboardInput(e) {
     if (e.key >= 0 && e.key <= 9) appendNumber(e.key)
     if (e.key === '.') appendPoint()
     if (e.key === '=' || e.key === 'Enter') evaluate()
     if (e.key === 'Backspace') deleteNumber()
     if (e.key === 'Escape') clear()
     if (e.key === '+' || e.key === '-' || e.key === '*' || e.key === '/')
-      setOperation(convertOperator(e.key))
-  }
+        setOperation(convertOperator(e.key))
+}
+
+function convertOperator(keyboardOperator) {
+    if (keyboardOperator === '/') return '÷'
+    if (keyboardOperator === '*') return '×'
+    if (keyboardOperator === '-') return '−'
+    if (keyboardOperator === '+') return '+'
+}
+
+function add(a, b) {
+    return a + b
+}
+
+function substract(a, b) {
+    return a - b
+}
+
+function multiply(a, b) {
+    return a * b
+}
+
+function divide(a, b) {
+    return a / b
+}
+
+function operate(operator, a, b) {
+    a = Number(a)
+    b = Number(b)
+    switch (operator) {
+        case '+':
+            return add(a, b)
+        case '−':
+            return substract(a, b)
+        case '×':
+            return multiply(a, b)
+        case '÷':
+            if (b === 0) return null
+            else return divide(a, b)
+        default:
+            return null
+    }
+}
