@@ -7,6 +7,11 @@
 - the. to work 
 - the numbers to enter */
 
+let firstOperand = ''
+let secondOperand = ''
+let currentOperation = null
+let shouldResetScreen = false
+
 
 const numberButtons = document.querySelectorAll('[data-number]')
 const operatorButtons = document.querySelectorAll('[data-operator]')
@@ -46,3 +51,12 @@ function resetScreen() {
     currentDisplayScreen.textContent = ''
     shouldResetScreen = false
 }
+
+function clear() {
+    currentDisplayScreen.textContent = '0'
+    previousDisplayScreen.textContent = ''
+    firstOperand = ''
+    secondOperand = ''
+    currentOperation = null
+  }
+  
