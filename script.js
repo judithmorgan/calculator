@@ -58,5 +58,27 @@ function clear() {
     firstOperand = ''
     secondOperand = ''
     currentOperation = null
-  }
-  
+}
+
+function appendPoint() {
+    if (shouldResetScreen) resetScreen()
+    if (currentDisplayScreen.textContent === '')
+        currentDisplayScreen.textContent = '0'
+    if (currentDisplayScreen.textContent.includes('.')) return
+    currentDisplayScreen.textContent += '.'
+}
+
+function deleteNumber() {
+    currentDisplayScreen.textContent = currentDisplayScreen.textContent
+        .toString()
+        .slice(0, -1)
+}
+
+
+function setOperation(operator) {
+    if (currentOperation !== null) evaluate()
+    firstOperand = currentDisplayScreen.textContent
+    currentOperation = operator
+    previousDisplayScreen.textContent = `${firstOperand} ${currentOperation}`
+    shouldResetScreen = true
+}
