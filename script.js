@@ -8,7 +8,6 @@
 - the numbers to enter */
 
 
-console.log("Hi there!")
 
 let firstOperand = ''
 let secondOperand = ''

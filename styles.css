@@ -1,3 +1,13 @@
+
+/* dont understand this */
+*,*::before,*::after { 
+   box-sizing: border-box;
+   padding: 0;
+   margin: 0;
+}
+
+
+
 html {
    /* footer support */
    position: relative;
@@ -5,9 +15,11 @@ html {
 }
 
 body {
-   background-color: #FFF5ED;
-   display: flex;
+   background: linear-gradient(to right,#F6C7B3, #f0defd );
    flex-direction: column;
+   line-height: 1.6;
+  /* footer support dont understand this either  */
+  margin-bottom: 100px;
 }
 
 header {
@@ -31,7 +43,6 @@ main {
 .calculator {
    display: flex;
    flex-direction: column;
-
    width: 350px;
    background-color: #FAE0D8;
    border-radius: 20px;
@@ -41,13 +52,23 @@ main {
 }
 
 .screen {
-   height: 50px;
    padding: 10px;
    border-radius: 5px;
    margin-bottom: 20px;
    background-color: #dfe1be;
    text-align: right;
 }
+
+   .previous-screen {
+      min-height: 32px;
+      font-size: 20px;
+   }
+
+   .current-screen {
+      min-height: 64px;
+      font-size: 40px;
+   }
+
 
 .btn {
    background-color: #F1DEEE;
@@ -81,6 +102,8 @@ footer {
    padding: 10px;
    font-size: 20px;
 }
+
+
 
 
 /*
